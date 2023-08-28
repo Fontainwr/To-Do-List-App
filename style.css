@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2603d5, #702ebb);
+    padding: 10px;
+    background: url('images/wall.jpg'); /* Updated background image path */
+    animation: fadeIn 1s;
+}
+
+.todo-app {
+    background: linear-gradient(135deg, #ff1313, #ffffff, #ffacac);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    box-shadow: 99 14px 8px rgba(2, 10, 10, 1.2); /* Updated shadow here */
+    animation: slideInFromLeft 1s;
+}
+
+.todo-app h2 {
+    vertical-align: middle;
+    color: #002765; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 20px;
+    width: 50px; /* Adjusted width for a larger image */
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px; 
+    background: #12a62d;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 38px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 12px;
+    padding: 12px 2px 2px 110px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 118px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Set the desired height for the centered item */
+    padding: 0; /* Remove previous padding */
+    position: relative;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
